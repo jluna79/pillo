@@ -1,0 +1,446 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"remo",
+				"removeClass"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"han",
+				"handleTrashClick"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"ve",
+				"vehiclePrototype"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"fu",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "web/index.html",
+			"settings":
+			{
+				"buffer_size": 6172,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/static/less/main.less",
+			"settings":
+			{
+				"buffer_size": 683,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"emm",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"setsyntaxtext",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"sf",
+				"Set Syntax: Diff"
+			],
+			[
+				"brack",
+				"Bracket Highlighter: Select Bracket Content"
+			],
+			[
+				"bracket",
+				"Bracket Highlighter: Match Brackets"
+			],
+			[
+				"packin",
+				"Package Control: Install Package"
+			],
+			[
+				"packinsta",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 246.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/canteratech/Sites/pillo/web/static/coffee/main.less",
+		"/Users/canteratech/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/canteratech/Sites/pillo/srv/app.coffee",
+		"/Users/canteratech/Sites/theonenode/app.coffee",
+		"/Users/canteratech/Sites/backbone-demo/static/css/inbox.css",
+		"/Users/canteratech/Sites/backbone-demo/jquery.html",
+		"/Users/canteratech/Sites/backbone-demo/static/css/main.css",
+		"/Users/canteratech/Sites/backbone-demo/backbone.html",
+		"/Users/canteratech/Dropbox/sandbox/talks/backbone-away/demo/README.md",
+		"/Users/canteratech/Dropbox/sandbox/talks/index.html",
+		"/Users/canteratech/Dropbox/sandbox/talks/talks.sublime-project",
+		"/Users/canteratech/Dropbox/sandbox/talks/backbone-away/index.html",
+		"/Users/canteratech/Dropbox/sandbox/talks/backbone-away/demo/index.html",
+		"/Users/canteratech/Dropbox/sandbox/talks/backbone-away/demo/static/js/app.js",
+		"/Users/canteratech/Dropbox/sandbox/talks/backbone-away/demo/jquery.html",
+		"/Users/canteratech/Dropbox/sandbox/talks/backbone-away/css/backbone-styles.css",
+		"/Users/havok/Sites/talks/index.html",
+		"/Users/havok/Sites/hanami/themes/terrafirma-mod/default.php",
+		"/Users/havok/Documents/GoogleDriveCredentials.json",
+		"/Users/havok/Sites/sandbox/mixmatch/js/sandbox.js",
+		"/Users/havok/Sites/sandbox/mixmatch/mixmatch.sublime-project",
+		"/Users/havok/Sites/c5/themes/cantera-tech/static/less/style.less",
+		"/Users/havok/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/havok/Sites/sandbox/mixmatch/index.html",
+		"/Users/havok/Sites/sandbox/mixmatch/js/script.js",
+		"/Users/havok/Sites/sandbox/mixmatch/less/style.less"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"demo",
+			"InboxMessageListListView",
+			": ",
+			"FielderList",
+			"fielderList",
+			"FielderList",
+			"FielderField",
+			"class=\"btn\"",
+			"#ing",
+			"inbox",
+			"helveti",
+			"Mixin",
+			"mixin",
+			"Mixin",
+			"irapuato",
+			"pattern",
+			"sequential",
+			"//--",
+			"always",
+			"http",
+			"iphone",
+			"browser",
+			"[] Hover of field scrolls to where it is",
+			"color6",
+			"group",
+			"hover",
+			"control",
+			"group",
+			"color",
+			".control-group.color4:hover, .color4.hover {border-left-color: #ff0 !important;}",
+			"Primary",
+			"bootstrap",
+			"group",
+			"group.+5"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "web/index.html",
+					"settings":
+					{
+						"buffer_size": 6172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1062,
+								1062
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "web/static/less/main.less",
+					"settings":
+					{
+						"buffer_size": 683,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 58.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"main.l",
+				"web/static/less/main.less"
+			],
+			[
+				"",
+				"web/index.html"
+			],
+			[
+				"index",
+				"backbone-away/demo/index.html"
+			],
+			[
+				"jq",
+				"backbone-away/demo/static/js/jq-inbox.js"
+			],
+			[
+				"ba",
+				"backbone-away/demo/backbone.html"
+			],
+			[
+				"app",
+				"backbone-away/demo/static/js/app-inbox.js"
+			],
+			[
+				"inde",
+				"backbone-away/index.html"
+			],
+			[
+				"jquer",
+				"backbone-away/demo/jquery.html"
+			],
+			[
+				"app.",
+				"backbone-away/demo/static/js/app.js"
+			],
+			[
+				"back",
+				"backbone-away/css/backbone-styles.css"
+			],
+			[
+				"jqu",
+				"backbone-away/demo/jquery.html"
+			],
+			[
+				".css",
+				"main.css"
+			],
+			[
+				"head",
+				"elements/header.php"
+			],
+			[
+				"elemen",
+				"elements/footer.php"
+			],
+			[
+				"scrip",
+				"js/script.js"
+			],
+			[
+				"style",
+				"less/style.less"
+			],
+			[
+				"script",
+				"js/script.js"
+			],
+			[
+				"stye",
+				"less/style.less"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"hola",
+				"hola"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 171.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,9 @@
+{
+	"name": "theOneNode",
+	"description": "One node to test them all",
+	"version": "1.0.0",
+	"dependencies" : {
+		"express"	:	"~3.0.3",
+		"request"	:	"~2.12.0"
+	}
+}

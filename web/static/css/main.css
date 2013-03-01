@@ -1,0 +1,184 @@
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+/* =============
+MY MIXINS
+   ============= */
+/* Sticky footer styles
+	  -------------------------------------------------- */
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+
+}
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+
+  margin: 0 auto -30px;
+}
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 30px;
+}
+#footer {
+  background-color: #f5f5f5;
+}
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+#wrap > .container-fluid {
+  padding-top: 60px;
+}
+/* Workspace styles
+-------------------------------------------------- */
+#workspace {
+  background-color: #627a86;
+  overflow: auto;
+  border: 1px solid #313d43;
+  min-height: 90%;
+  height: auto !important;
+  height: 90%;
+}
+#workspace [class*="span"] {
+  margin-right: 1%;
+}
+#workspace section {
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #eeeeee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+#workspace section h2,
+#workspace section h3,
+#workspace section h4,
+#workspace section h5,
+#workspace section h6 {
+  line-height: 1.1em;
+  padding-bottom: 5px;
+}
+#workspace section h2 {
+  font-size: 1.5em;
+}
+#workspace section article {
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #ffffff;
+  /*Changing the bootstrap*/
+
+}
+#workspace section article label {
+  float: none;
+}
+#workspace section article input[type="text"],
+#workspace section article textarea,
+#workspace section article select,
+#workspace section article .uneditable-input {
+  width: 96%;
+}
+#workspace section article .summary {
+  margin-bottom: 5px;
+}
+#workspace section article .summary li {
+  display: inline;
+  padding: 2px 5px;
+  text-align: center;
+  background-color: #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: #fff;
+  color: #666666;
+  text-shadow: 0 1px 0 #ffffff;
+}
+#workspace section article .summary .comments .iconic:before {
+  content: "q";
+}
+#workspace section article .summary .questions .iconic:before {
+  content: "e";
+}
+#workspace section article.placeholder {
+  visibility: hidden;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+#workspace section footer {
+  margin: 0;
+  padding: 5px;
+  font-size: 1.2em;
+}
+#workspace section footer a {
+  display: block;
+  text-decoration: none;
+  color: #666666;
+  text-shadow: 0 1px 0 #ffffff;
+}
+#addOne {
+  margin-top: 5px;
+  background-color: #eeeeee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  text-align: center;
+}
+#addOne a {
+  color: #666666;
+  text-shadow: 0 1px 0 #ffffff;
+  text-decoration: none;
+  display: block;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+/* =============================================================================
+   Sortable and jQueryUI related
+   ========================================================================== */
+.ui-sortable-placeholder {
+  border: 1px dashed #ccc;
+  visibility: visible !important;
+  height: 50px !important;
+  background-color: #d8d8d8 !important;
+}
+.ui-sortable-placeholder * {
+  visibility: hidden;
+}
