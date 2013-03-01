@@ -12,6 +12,8 @@ Built using:
 * coffeescript (for Javascript)
 * LESS (for CSS)
 
+Base page created using initalizr.
+
 ##References for set-up
 
 * http://tech.diaslopes.com/?p=112 (set up less in TextSublime)
