@@ -7,3 +7,5 @@ $ ->
 		connectWith : '.kunit'
 
 	$( "#dashboard section" ).disableSelection()
+
+	$.pillo.start()

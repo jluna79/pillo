@@ -7,7 +7,8 @@
       cancel: 'footer, .placeholder',
       connectWith: '.kunit'
     });
-    return $("#dashboard section").disableSelection();
+    $("#dashboard section").disableSelection();
+    return $.pillo.start();
   });
 
 }).call(this);

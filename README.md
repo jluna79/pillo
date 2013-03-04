@@ -8,7 +8,7 @@ Built using:
 * Backbone
 * backbone-relational
 * node.js (server and compiling)
-* mustache (templates)
+* handlebars.js (templates)
 * coffeescript (for Javascript)
 * LESS (for CSS)
 

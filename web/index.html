@@ -104,7 +104,7 @@
                             </article>
                             
                             <footer>
-                                <a href="#">Click or drag info to add it</a>
+                                <a href="#">Click to add to track</a>
                             </footer>
                         </section>
 
@@ -123,7 +123,7 @@
                             
                             </article>
                             <footer>
-                                <a href="#">Click or drag info to add it</a>
+                                <a href="#">Click to add to track </a>
                             </footer>
                         </section>
 
@@ -144,7 +144,7 @@
                             
                             </article>
                             <footer>
-                                <a href="#">Click or drag info to add it</a>
+                                <a href="#">Click to add to track</a>
                             </footer>
                         </section>
 
@@ -171,13 +171,44 @@
         </div>
     </footer>
 
+    <!-- Templates (precompiling pending) -->
+    <script type="text/template" id="tmpl_track">
+            <section class="kunit span3">
+            <header>
+                <h2>{{title}}</h2>
+                <p>{{description}}</p>
+            </header>
+            <article class="placeholder"></article>
+            <footer>
+                <a href="#">Click to add to track </a>
+            </footer>
+        </section>
+    </script>
+    
+    <script type="text/template" id="tmpl_pill">
+        <article class="kmedia">
+            <p>{{content}}</p>
+            
+            {{#with references}}
+            <ul class="summary unstyled">
+                {{#each references}}
+                <li class="questions"><i class="icon-tasks"></i> {{this}}</li>
+                {{/each}}
+            </ul>
+            {{/with}}
+        </article>
 
+    </script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
         <script src="static/js/vendor/bootstrap.min.js"></script>
         <script src="static/js/vendor/jquery-ui-1.10.1.custom.min.js"></script>
+        <script src="static/js/vendor/underscore-1.4.4.min.js"></script>
+        <script type="text/javascript" src="static/js/vendor/handlebars-1.0.0-rc.3.js"></script>
+        <script src="static/js/vendor/backbone-0.9.1.min.js"></script>
 
+        <script src="static/js/pillo.js"></script>
         <script src="static/js/main.js"></script>
 
         <script>
