@@ -1,6 +1,7 @@
 pill-o
 =====
 
+[Under construction!]
 A Trello-like experiment I created to try/learn some technologies.
 
 Built using:

@@ -2,16 +2,100 @@
 (function() {
 
   $(function() {
+    var tracks;
     $.pillo = {};
     $.pillo.Track = Backbone.Model.extend({
       defaults: {
-        __id: '',
+        _id: '',
         title: 'New track',
         description: 'Some text'
       }
     });
+    $.pillo.TrackCollection = Backbone.Collection.extend({
+      model: $.pillo.Track
+    });
+    $.pillo.TrackListView = Backbone.View.extend({
+      tagName: 'div',
+      className: 'trak_list_view',
+      template: Handlebars.compile($('#tmpl_track_list').html()),
+      initialize: function() {
+        _.bindAll(this, 'render', 'addTrack', 'addOne', 'addAll');
+        this.collection.bind('add', this.addOne);
+        this.collection.bind('reset', this.addAll);
+        return this.collection.bind('change', this.addAll);
+      },
+      render: function() {
+        return this.addAll;
+      },
+      addAll: function() {
+        return this.collection.forEach(this.addOne);
+      },
+      addOne: function(track) {
+        var trackView;
+        trackView = new $.pillo.TrackView({
+          model: track
+        });
+        return this.$el.append(trackView.render());
+      },
+      events: {
+        'click #addOne': 'addTrack'
+      },
+      addTrack: function(e) {
+        return console.log('New track!');
+      }
+    });
+    $.pillo.TrackView = Backbone.View.extend({
+      tagName: 'div',
+      className: 'track_view',
+      template: Handlebars.compile($('#tmpl_track').html()),
+      initialize: function() {
+        _.bindAll(this, 'render', 'addPill');
+        return this.model.bind('change', this.render);
+      },
+      render: function() {
+        return this.$el.html(this.template(this.model.toJSON()));
+      },
+      events: {
+        'click footer > a': 'addPill'
+      },
+      addPill: function(e) {
+        return console.log('New pill!');
+      }
+    });
+    tracks = [
+      {
+        _id: 101,
+        title: "Un campo",
+        description: 'Una descripcion'
+      }, {
+        _id: 102,
+        title: "Otro campo",
+        description: 'Otra descripcion'
+      }
+    ];
+    $.pillo.App = Backbone.Router.extend({
+      routes: {
+        "": "show_track_list",
+        "pill/:_id": "show_details"
+      },
+      initialize: function() {
+        var trackCollection, trackListView;
+        trackCollection = new $.pillo.TrackCollection();
+        trackListView = new $.pillo.TrackListView({
+          el: $('#workspace'),
+          collection: trackCollection
+        });
+        trackCollection.reset(tracks);
+        return console.log('Pill-o initialized...');
+      },
+      show_track_list: function() {},
+      show_details: function() {}
+    });
     return $.pillo.start = function() {
-      return console.log(new $.pillo.Track());
+      $.pillo.app = new $.pillo.App();
+      return Backbone.history.start({
+        pushState: true
+      });
     };
   });
 
