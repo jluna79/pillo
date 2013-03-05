@@ -2,11 +2,28 @@ $ ->
 	$.pillo = {}
 
 	# Models //////////////////////////////////////////////////
-	$.pillo.Track = Backbone.Model.extend
+	$.pillo.Pill = Backbone.RelationalModel.extend
+		idAttribute: '_id'
+		defaults:
+			_id: ''
+			content: 'Some text describing'
+			references: [4,5]
+
+
+	$.pillo.Track = Backbone.RelationalModel.extend
+		idAttribute: '_id'
 		defaults:
 			_id: ''
 			title: 'New track'
 			description: 'Some text'
+		relations: [
+			type: Backbone.HasMany
+			key: 'pills'
+			relatedModel: '$.pillo.Pill'
+			reverseRelation:
+				key: 'track'
+				includeInJSON: '_id'
+		]
 
 
 	$.pillo.TrackCollection = Backbone.Collection.extend
@@ -63,11 +80,46 @@ $ ->
 
 
 	# Pill
+	$.pillo.PillView = Backbone.View.extend
+		tagName: 'div'
+		className: 'pill_view'
+		template: Handlebars.compile $('#tmpl_pill')
+
+		initialize: ->
+			_.bindAll @, 'render'
+			@.model.bind 'change', @.render
+
+		render: ->
+			@.$el.html( @.template(@.model.toJSON() ))
+
+
 
 	# Router //////////////////////////////////////////////////
 	tracks = [
-		{_id: 101, title : "Un campo", description: 'Una descripcion'}
-		{_id: 102, title : "Otro campo", description: 'Otra descripcion'}
+		{
+			_id: 101
+			title : "Un campo"
+			description: 'Una descripcion'
+			pills: [{
+	            "_id": "123"
+	            "title": "Author Name"
+	            "description": "The message"},
+	        	{"_id": "124",
+	            "title": "Second Author Name",
+	            "description": "The reply to the previous message"}]
+		}
+		{
+			_id: 102
+			title : "Otro campo"
+			description: 'Otra descripcion'
+	        pills: [{
+	            "_id": "223"
+	            "title": "Authorss Name"
+	            "description": "The messagessss"},
+	        	{"_id": "224"
+	            "title": "Secondss Author Name"
+	            "description": "The reply to the previous messagesss"}]
+		}
 	]
 
 	$.pillo.App = Backbone.Router.extend

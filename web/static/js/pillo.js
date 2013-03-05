@@ -4,12 +4,32 @@
   $(function() {
     var tracks;
     $.pillo = {};
-    $.pillo.Track = Backbone.Model.extend({
+    $.pillo.Pill = Backbone.RelationalModel.extend({
+      idAttribute: '_id',
+      defaults: {
+        _id: '',
+        content: 'Some text describing',
+        references: [4, 5]
+      }
+    });
+    $.pillo.Track = Backbone.RelationalModel.extend({
+      idAttribute: '_id',
       defaults: {
         _id: '',
         title: 'New track',
         description: 'Some text'
-      }
+      },
+      relations: [
+        {
+          type: Backbone.HasMany,
+          key: 'pills',
+          relatedModel: '$.pillo.Pill',
+          reverseRelation: {
+            key: 'track',
+            includeInJSON: '_id'
+          }
+        }
+      ]
     });
     $.pillo.TrackCollection = Backbone.Collection.extend({
       model: $.pillo.Track
@@ -58,6 +78,18 @@
       },
       addPill: function(e) {
         return console.log('New pill!');
+      }
+    });
+    $.pillo.PillView = Backbone.View.extend({
+      tagName: 'div',
+      className: 'pill_view',
+      template: Handlebars.compile($('#tmpl_pill')),
+      initialize: function() {
+        _.bindAll(this, 'render');
+        return this.model.bind('change', this.render);
+      },
+      render: function() {
+        return this.$el.html(this.template(this.model.toJSON()));
       }
     });
     tracks = [
