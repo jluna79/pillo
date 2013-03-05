@@ -22,23 +22,18 @@ $ ->
 		template: Handlebars.compile $('#tmpl_track_list').html()
 
 		initialize: ->
-			_.bindAll @, 'render', 'addTrack', 'addOne', 'addAll'
-			#@.model.bind 'reset', @.render
-			#@.model.bind 'change', @.render
-
+			_.bindAll @, 'render', 'addTrack', 'addOne'
 			@.collection.bind 'add', @.addOne
-			@.collection.bind 'reset', @.addAll
-			@.collection.bind 'change', @.addAll
+			@.collection.bind 'reset', @.render
+			@.collection.bind 'change', @.render
 
 		render: ->
-			@.addAll
-
-		addAll: ->
+			@.$el.html(@.template())
 			@.collection.forEach @.addOne
 
 		addOne: (track) ->
 			trackView = new $.pillo.TrackView {model: track}
-			@.$el.append trackView.render()
+			@.$('#addOne').parent().prepend trackView.render()
 
 		events:
 			'click #addOne': 'addTrack'
@@ -48,8 +43,8 @@ $ ->
 
 	# Track
 	$.pillo.TrackView = Backbone.View.extend
-		tagName: 'div'
-		className: 'track_view'
+		tagName: 'section'
+		className: 'kunit span3'
 		
 		template: Handlebars.compile $('#tmpl_track').html()
 
@@ -87,6 +82,8 @@ $ ->
 				collection: trackCollection
 
 			trackCollection.reset(tracks)
+			trackListView.render()
+
 			console.log 'Pill-o initialized...'
 
 		show_track_list: ->

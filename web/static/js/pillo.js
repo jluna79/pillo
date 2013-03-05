@@ -19,15 +19,13 @@
       className: 'trak_list_view',
       template: Handlebars.compile($('#tmpl_track_list').html()),
       initialize: function() {
-        _.bindAll(this, 'render', 'addTrack', 'addOne', 'addAll');
+        _.bindAll(this, 'render', 'addTrack', 'addOne');
         this.collection.bind('add', this.addOne);
-        this.collection.bind('reset', this.addAll);
-        return this.collection.bind('change', this.addAll);
+        this.collection.bind('reset', this.render);
+        return this.collection.bind('change', this.render);
       },
       render: function() {
-        return this.addAll;
-      },
-      addAll: function() {
+        this.$el.html(this.template());
         return this.collection.forEach(this.addOne);
       },
       addOne: function(track) {
@@ -35,7 +33,7 @@
         trackView = new $.pillo.TrackView({
           model: track
         });
-        return this.$el.append(trackView.render());
+        return this.$('#addOne').parent().prepend(trackView.render());
       },
       events: {
         'click #addOne': 'addTrack'
@@ -45,8 +43,8 @@
       }
     });
     $.pillo.TrackView = Backbone.View.extend({
-      tagName: 'div',
-      className: 'track_view',
+      tagName: 'section',
+      className: 'kunit span3',
       template: Handlebars.compile($('#tmpl_track').html()),
       initialize: function() {
         _.bindAll(this, 'render', 'addPill');
@@ -86,6 +84,7 @@
           collection: trackCollection
         });
         trackCollection.reset(tracks);
+        trackListView.render();
         return console.log('Pill-o initialized...');
       },
       show_track_list: function() {},
