@@ -96,11 +96,29 @@
       {
         _id: 101,
         title: "Un campo",
-        description: 'Una descripcion'
+        description: 'Una descripcion',
+        pills: [
+          {
+            "_id": "123",
+            "content": "The message"
+          }, {
+            "_id": "124",
+            "content": "The reply to the previous message"
+          }
+        ]
       }, {
-        _id: 102,
+        _id: 201,
         title: "Otro campo",
-        description: 'Otra descripcion'
+        description: 'Otra descripcion',
+        pills: [
+          {
+            "_id": "223",
+            "content": "The messagessss"
+          }, {
+            "_id": "224",
+            "content": "The reply to the previous messagesss"
+          }
+        ]
       }
     ];
     $.pillo.App = Backbone.Router.extend({
